@@ -5,7 +5,8 @@ const TodoList = () => {
     const [tasks, setTasks] = useState(() => {
         return JSON.parse(localStorage.getItem("tasks")) || [];
     });
-    c
+
+    const [newTask, setNewTask] = useState("");  // ✅ Define newTask
     const [filter, setFilter] = useState("all");
     const [dueDate, setDueDate] = useState("");
 
@@ -53,7 +54,9 @@ const TodoList = () => {
                     value={dueDate}
                     onChange={(e) => setDueDate(e.target.value)}
                 />
-                <button onClick={addTask} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add</button>
+                <button onClick={addTask} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                    Add
+                </button>
             </div>
 
             <div className="flex justify-between mt-4">
