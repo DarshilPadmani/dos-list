@@ -3,6 +3,7 @@ import "tailwindcss/tailwind.css";
 import Header from "./components/header";
 import Footer from "./components/Footer";
 import TodoList from "./components/TodoList";
+import TaskList from "./components/Tasklist";
 
 function App() {
   return (

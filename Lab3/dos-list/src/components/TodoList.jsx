@@ -5,7 +5,7 @@ const TodoList = () => {
     const [tasks, setTasks] = useState(() => {
         return JSON.parse(localStorage.getItem("tasks")) || [];
     });
-    const [newTask, setNewTask] = useState("");
+    c
     const [filter, setFilter] = useState("all");
     const [dueDate, setDueDate] = useState("");
 
