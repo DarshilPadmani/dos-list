@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; padding: 50px;">
+    <div
+        style="background: white; padding: 20px; border-radius: 8px; width: 400px; margin: auto; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #333;">Welcome to your Dashboard</h2>
+        <p style="color: #555;">You are logged in as <strong>{{ user.username }}</strong></p>
+        <a href="{% url 'logout' %}"
+            style="background: #DC3545; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 10px;">
+            Logout
+        </a>
+    </div>
+</body>
+
+</html>

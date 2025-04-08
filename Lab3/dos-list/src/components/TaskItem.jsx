@@ -14,7 +14,7 @@ const TaskItem = ({ task, toggleTask, deleteTask, editTask }) => {
                 />
             ) : (
                 <span
-                    className={`flex-grow ${task.completed ? "line-through text-gray-500" : "cursor-pointer"}`}
+                    className={`flex-grow  ${task.completed ? "line-through text-gray-500" : "cursor-pointer"}`}
                     onClick={() => toggleTask(task.id)}
                 >
                     {task.text} - <span className="text-sm text-gray-500">{task.dueDate}</span>

@@ -1,20 +1,26 @@
-import React from "react";
-import "tailwindcss/tailwind.css";
-import Header from "./components/header";
-import Footer from "./components/Footer";
-import TodoList from "./components/TodoList";
-import TaskList from "./components/Tasklist";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import TodoList from './components/TodoList';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Profile from './components/Profile'; // Import the new Profile component
 
-function App() {
+const App = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-200">
-      <Header />
-      <main className="flex-grow">
-        <TodoList />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Routes>
+          <Route path="/" element={<TodoList />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/profile" element={<Profile />} /> {/* Add the new route here */}
+          {/* Add other routes here */}
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
